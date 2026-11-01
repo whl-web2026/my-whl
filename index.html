@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>冰雪运动 - 中国健儿风采</title>
+    <style>
+        /* 全局重置与基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "SimHei", sans-serif;
+            background-color: #f5f5f5; /* 浅灰背景衬托主体 */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 全屏容器，严格限制宽度1000px并居中 */
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* 添加阴影增加层次感 */
+        }
+
+        /* 头部区域：红白配色，体现拼搏精神 */
+        header {
+            background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            border-bottom: 5px solid #ffffff;
+        }
+
+        header h1 {
+            font-size: 42px;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 导航栏（虽然要求没强制写，但二级页面需要入口，这里用卡片链接代替，更符合排版美观） */
+
+        /* 内容区域 */
+        .content {
+            padding: 30px;
+        }
+
+        /* 每一条运动员/项目介绍区块 */
+        .athlete-card {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border-left: 6px solid #d32f2f; /* 红色侧边条 */
+        }
+
+        .athlete-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 图片区域 */
+        .athlete-img {
+            width: 300px;
+            flex-shrink: 0;
+            height: 220px;
+            overflow: hidden;
+            background-color: #eee; /* 占位色 */
+        }
+
+        .athlete-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .athlete-card:hover .athlete-img img {
+            transform: scale(1.05);
+        }
+
+        /* 文字信息区域 */
+        .athlete-info {
+            padding: 20px 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .athlete-info h2 {
+            font-size: 26px;
+            color: #d32f2f; /* 红色标题 */
+            margin-bottom: 5px;
+            display: inline-block;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        /* 英文/项目副标题 */
+        .athlete-info .sub-title {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .athlete-info p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 超链接按钮样式 */
+        .btn-link {
+            display: inline-block;
+            background-color: #d32f2f;
+            color: white;
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s;
+            align-self: flex-start;
+        }
+
+        .btn-link:hover {
+            background-color: #b71c1c;
+            text-decoration: underline;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+
+        /* 响应式微调（虽然要求固定1000px，但为了不出现横向滚动条，设置最小宽度） */
+        @media (max-width: 1020px) {
+            .container {
+                width: 100%;
+            }
+            .athlete-card {
+                flex-direction: column;
+            }
+            .athlete-img {
+                width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 头部：主题说明 -->
+    <header>
+        <h1>冰雪运动</h1>
+        <p>2022年，中国北京举办第24届冬季奥运会。让我们来了解一下冰雪运动的魅力，看看中国健儿的风采。</p>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <div class="content">
+
+        <!-- 1. 武大靖 -->
+        <div class="athlete-card">
+            <div class="athlete-img">
+                <!-- 请将武大靖的图片命名为 wudajing.jpg 放入 images 文件夹 -->
+                <img src="images/wudajing.jpg" alt="武大靖">
+            </div>
+            <div class="athlete-info">
+                <h2>武大靖</h2>
+                <div class="sub-title">短道速滑 (Short Track Speed Skating)</div>
+                <p>
+                    中国男子短道速滑队运动员，短道速滑男子500米世界纪录保持者、奥运会纪录保持者。2018年平昌冬奥会短道速滑男子500米冠军，中国男子短道速滑奥运金牌第一人。
+                </p>
+                <p style="font-size: 13px; color: #777; background: #f9f9f9; padding: 8px; border-radius: 4px;">
+                    <strong>项目简介：</strong>冬季奥运会项目，全称短跑道速度滑冰，比赛场地的大小为30×60米，跑道每圈的长度为111.12米。1992年阿尔贝维尔冬奥会成为正式比赛项目。
+                </p>
+                <!-- 超文本链接进入二级页面 -->
+                <a href="wudajing.html" class="btn-link" target="_blank">了解更多详情 &gt;</a>
+            </div>
+        </div>
+
+        <!-- 2. 陈露 -->
+        <div class="athlete-card">
+            <div class="athlete-img">
+                <!-- 请将陈露的图片命名为 chenlu.jpg 放入 images 文件夹 -->
+                <img src="images/chenlu.jpg" alt="陈露">
+            </div>
+            <div class="athlete-info">
+                <h2>陈露</h2>
+                <div class="sub-title">花样滑冰 (Figure Skating)</div>
+                <p>
+                    陈露是中国花样滑冰的代表，为我国的花样滑冰做出了巨大的贡献。她取得世界冠军的成绩，让全世界了解中国花样滑冰运动员的优秀。她还为国家培养了一代又一代的花样滑冰选手。
+                </p>
+                <p style="font-size: 13px; color: #777; background: #f9f9f9; padding: 8px; border-radius: 4px;">
+                    <strong>项目简介：</strong>花样滑冰是冬季奥运会的正式比赛项目。运动员穿着脚底装有冰刀的冰鞋、靠自身力量在冰上滑行，表演预先以技术动作为基础编排的节目，由裁判组评估打分、排出名次。
+                </p>
+                <a href="chenlu.html" class="btn-link" target="_blank">了解更多详情 &gt;</a>
+            </div>
+        </div>
+
+        <!-- 3. 申雪/赵宏博 -->
+        <div class="athlete-card">
+            <div class="athlete-img">
+                <!-- 请将申雪赵宏博的图片命名为 shenxue_zhaohongbo.jpg 放入 images 文件夹 -->
+                <img src="images/shenxue_zhaohongbo.jpg" alt="申雪/赵宏博">
+            </div>
+            <div class="athlete-info">
+                <h2>申雪 / 赵宏博</h2>
+                <div class="sub-title">花样滑冰双人滑</div>
+                <p>
+                    2010年温哥华冬奥会中，合作18年的申雪赵宏博，斩获一枚宝贵的双人滑金牌，这也是中国第一枚双人滑奥运金牌。这一年赵宏博37岁，申雪32岁，夺冠后第二天两人宣布退役。退役之后，赵宏博留队任教，担任总教练一职。
+                </p>
+                <a href="shenxue.html" class="btn-link" target="_blank">了解更多详情 &gt;</a>
+            </div>
+        </div>
+
+        <!-- 4. 冰壶运动 -->
+        <div class="athlete-card">
+            <div class="athlete-img">
+                <!-- 请将冰壶图片命名为 binghu.jpg 放入 images 文件夹 -->
+                <img src="images/binghu.jpg" alt="冰壶运动">
+            </div>
+            <div class="athlete-info">
+                <h2>冰壶运动</h2>
+                <div class="sub-title">冰壶 (Curling)</div>
+                <p>
+                    又称掷冰壶、冰上溜石，是以队为单位在冰上进行的一种投掷性竞赛项目，冬奥会比赛项目，并设有冰壶世锦赛。设男女2个小项，每队为四人。
+                </p>
+                <p style="font-size: 13px; color: #777; background: #f9f9f9; padding: 8px; border-radius: 4px;">
+                    <strong>项目数据：</strong>冰壶周长约为91.44厘米，高11.43厘米，重量最大为19.96公斤。刷冰是为了减小冰壶与冰面间摩擦。有人把冰壶称作“冰上国际象棋”，诠释了这项运动的神秘与高雅。
+                </p>
+                <a href="binghu.html" class="btn-link" target="_blank">了解更多详情 &gt;</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>网页设计综合实训 · 冰雪运动主题 | 国家开放大学实验学院</p>
+    </footer>
+</div>
+
+</body>
+</html>
